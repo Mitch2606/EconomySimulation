@@ -1,10 +1,7 @@
 numTimeSteps = 10;
 
-
-
-
 %StoreChooserObs
-numObsStoreChooser = 6;
+numObsStoreChooser = 7;
 ObservationInfo = rlNumericSpec([numObsStoreChooser numTimeSteps 1]);
 ObservationInfo.Name = 'Agent Actions';
 
@@ -28,7 +25,7 @@ StoreChooser = rlPPOAgent(discActor, critic);
 % StoreChooser.AgentOptions.NumEpoch = 5;
 
 %Item Chooser and Buyer
-numObsStoreChooser = 10;
+numObsStoreChooser = 11;
 ObservationInfo = rlNumericSpec([numObsStoreChooser numTimeSteps 1]);
 ObservationInfo.Name = 'Agent Actions';
 
@@ -71,7 +68,7 @@ Buyer = rlPPOAgent(discActor, critic);
 % Buyer.AgentOptions.NumEpoch = 5;
 
 %Business Nets
-numObsStoreChooser = 5;
+numObsStoreChooser = 6;
 ObservationInfo = rlNumericSpec([numObsStoreChooser numTimeSteps 1]);
 ObservationInfo.Name = 'Agent Actions';
 
@@ -91,16 +88,16 @@ FoodAgent = rlPPOAgent(discActor, critic);
 WeedAgent = rlPPOAgent(discActor, critic);
 EnergyAgent = rlPPOAgent(discActor, critic);
 
-FoodAgent.AgentOptions.MiniBatchSize = 5;
-FoodAgent.AgentOptions.ExperienceHorizon = 10;
+% FoodAgent.AgentOptions.MiniBatchSize = 5;
+% FoodAgent.AgentOptions.ExperienceHorizon = 10;
 % FoodAgent.AgentOptions.NumEpoch = 5;
 % 
-WeedAgent.AgentOptions.MiniBatchSize = 5;
-WeedAgent.AgentOptions.ExperienceHorizon = 10;
+% WeedAgent.AgentOptions.MiniBatchSize = 5;
+% WeedAgent.AgentOptions.ExperienceHorizon = 10;
 % WeedAgent.AgentOptions.NumEpoch = 5;
 % 
-EnergyAgent.AgentOptions.MiniBatchSize = 5;
-EnergyAgent.AgentOptions.ExperienceHorizon = 10;
+% EnergyAgent.AgentOptions.MiniBatchSize = 5;
+% EnergyAgent.AgentOptions.ExperienceHorizon = 10;
 % EnergyAgent.AgentOptions.NumEpoch = 5;
 
 
