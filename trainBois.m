@@ -6,6 +6,8 @@ Agents = [ItemChooser, Buyer, StoreChooser, FoodAgent, WeedAgent, EnergyAgent];
 trainOpts = rlTrainingOptions;
 trainOpts.MaxStepsPerEpisode = 100;
 trainOpts.StopTrainingCriteria = "EpisodeCount";
+trainOpts.SaveAgentCriteria = "AverageReward";
+trainOpts.SaveAgentValue = 1000;
 
 while((a ~= 0))
     stats = train(Agents, env, trainOpts);
